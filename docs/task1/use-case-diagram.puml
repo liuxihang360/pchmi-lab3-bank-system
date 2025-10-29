@@ -1,0 +1,36 @@
+@startuml
+title Banking System - Use Case Diagram
+
+left to right direction
+
+actor Customer
+actor "Bank Employee" as Employee
+actor "Bank Manager" as Manager
+
+rectangle "Banking System" {
+  usecase "Register Customer" as UC1
+  usecase "Open Account" as UC2
+  usecase "Make Deposit" as UC3
+  usecase "Process Withdrawal" as UC4
+  usecase "Transfer Funds" as UC5
+  usecase "View Account Balance" as UC6
+  usecase "Generate Statement" as UC7
+  usecase "Manage Users" as UC8
+}
+
+Customer --> UC1
+Customer --> UC2
+Customer --> UC3
+Customer --> UC4
+Customer --> UC5
+Customer --> UC6
+Customer --> UC7
+
+Employee --> UC1
+Employee --> UC2
+Employee --> UC8
+
+Manager --> UC7
+Manager --> UC8
+
+@enduml
